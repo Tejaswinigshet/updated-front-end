@@ -1,0 +1,152 @@
+<!-- <form id="payment-form">
+    <div class="payment">
+        <div class="col-50">
+            <h3>Payment</h3>
+            <div class="icon-container">
+                <i class="fas fa-cc-visa" style="color:navy;"></i>&nbsp;
+                <i class="fas fa-cc-amex" style="color:blue;"></i>&nbsp;
+                <i class="fas fa-cc-mastercard" style="color:red;"></i>&nbsp;
+                <i class="fas fa-cc-discover" style="color:orange;"></i>&nbsp;<br>
+            </div>
+            <br>
+            <div>
+                <label for="name">Name on Card
+                <input id="name" maxlength="25" type="text" name="name" required size="1" placeholder="John More" #name></label>
+            </div>
+            <div>
+                <label for="ccnum">Credit card number</label>
+                <input type="text" name="cardNumber" required maxlength="16" placeholder="1111-2222-3333-4444" maxlength="16" inputmode="numeric" #cnumber>
+            </div>
+            <div>
+                <label for="expmonth">Exp Month</label>
+                <input type="text" name="expMonth" required maxlength="02" placeholder="09" #expmonth>
+
+                <div class="row">
+                    <div class="col-50">
+                        <label for="expyear">Exp Year</label>
+                        <input type="text" name="expYear" required maxlength="04" placeholder="2018" #expyear>
+                    </div>
+                </div>
+            </div>
+            <div class="col-50">
+                <label for="cvv">CVV</label>
+                <input type="text" name="cvc" required maxlength="3" placeholder="352" #cvv>
+            </div>
+
+            <div class="form-group" id="pay-now">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Submit</button>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+            Modal Header -->
+<!-- <div class="modal-header">
+                <h4 class="modal-title"></h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+<!-- </div> -->
+
+<!-- Modal body -->
+<!-- <div class="modal-body">
+                <h4>Payment Successful</h4>
+            </div> -->
+
+<!-- Modal footer -->
+<!-- <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div> -->
+
+<!-- </div>
+    </div>
+</div> -->
+
+<body>
+    <form>
+        <div class="container-fluid py-3">
+            <div class="row">
+                <div class="col-12 col-sm-8 col-md-6 col-lg-4 mx-auto">
+                    <div id="pay-invoice" class="card">
+                        <div class="card-body">
+                            <div class="card-title">
+                                <h3 class="text-center">Pay Invoice</h3>
+                            </div>
+                            <hr>
+                            <form action="/echo" method="post" class="needs-validation">
+
+                                <div class="form-group has-success">
+                                    <label for="cc-name" class="control-label mb-1">Name on card </label>
+
+                                    <input id="cc-name" name="cc-name" type="text" class="form-control cc-name" maxlength="25" required #name>
+
+                                </div>
+                                <div class="form-group">
+                                    <label for="cc-number" class="control-label mb-1">Card number &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <img src="http://i76.imgup.net/accepted_c22e0.png"></label>
+                                    <!-- <input id="cc-number" name="cc-number" type="number" class="form-control cc-number identified visa" maxlength="16" #number> -->
+                                    <input id="cc-number" name="cc-number" type="number" class="form-control cc-number identified visa" required="" pattern="[0-9]{16}" maxlength="16" #number>
+                                </div>
+                                <div class="row">
+                                    <div class="col-4">
+                                        <div class="form-group">
+                                            <label for="cc-exp" class="control-label mb-1">ExpMonth</label>
+
+                                            <input id="cc-exp" name="cc-exp" type="number" class="form-control cc-exp" required placeholder="MM" maxlength="2" #expmonth>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="form-group">
+                                            <label for="cc-exp" class="control-label mb-1">ExpYear</label>
+                                            <input id="cc-exp" name="cc-exp" type="number" class="form-control cc-exp" required placeholder="YYYY" maxlength="2" #expyear>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-4">
+                                        <label for="x_card_code" class="control-label mb-1">CVV</label>
+                                        <div class="input-group">
+                                            <input id="x_card_code" name="x_card_code" type="number" class="form-control cc-cvc" maxlength="3" #cvc>
+                                            <span class="invalid-feedback order-last">Enter the 3-digit code on back</span>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <button id="payment-button" type="submit" class="btn btn-lg btn-info btn-block" data-toggle="modal" data-target="#myModal" (click)="payment(name.value,number.value,expmonth.value,expyear.value,cvc.value)">
+                                <i class="fa fa-lock fa-lg"></i>&nbsp;
+                                <span id="payment-button-amount" >Pay</span>
+                               
+                            </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title"></h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <h4>Payment Successful</h4>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+            </div>
