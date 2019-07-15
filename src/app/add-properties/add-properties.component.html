@@ -142,31 +142,219 @@
                 <div class="bgimage">
                     <ng-template matStepLabel> <strong>Space Details:</strong></ng-template>
                     <mat-form-field>
-                        <input matInput placeholder="Space Id" [(ngModel)]="spaceId" formControlName="IdCtrl" required>
+                        <input matInput placeholder="SpaceId" [(ngModel)]="spaceId" formControlName="IdCtrl" required>
+
                     </mat-form-field>
                     <br>
+
+
                     <mat-form-field>
                         <input matInput placeholder="Space Name" [(ngModel)]="spaceName" formControlName="NameCtrl" required>
 
                     </mat-form-field>
                     <br>
-                    <mat-form-field>
+                    <!-- <mat-form-field>
                         <mat-label>Select your categoty (required)</mat-label>
-                        <select matNativeControl formControlName="CategoryCtrl" required>
-                                  <option label="--select something --"></option>
-                                  <option value="Meeting Room">Meeting Room</option>
-                                  <option value="Dedicated Desk">Dedicated desk</option>
-                                  <option value="Event Space">Event Space</option>
-                                  <option value="Training Room">Training Room</option>
-                                  <option value="Private Cabin">Private Cabin</option>
-                                  <option value="Hot Desk">Hot Desk</option>
-                                </select>
+
                     </mat-form-field>
-                    <br>
-                    <mat-form-field>
+                    <br> -->
+
+                    <!-- <mat-accordion> -->
+                    <mat-label>Select your categoty (required)</mat-label>
+                    <mat-expansion-panel>
+
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                Meeting Room
+                            </mat-panel-title>
+
+                        </mat-expansion-panel-header>
+                        <div id="matprice">
+                            <mat-form-field>
+                                <input matInput placeholder="Capacity" formControlName="CapacityCtrl" required>
+                                <mat-hint>Number of seats available</mat-hint>
+                            </mat-form-field><br>
+                            <mat-form-field>
+                                <input matInput placeholder="HourlyRate" formControlName="HourCtrl" required>
+                                <mat-hint>in Rupees</mat-hint>
+                            </mat-form-field><br>
+
+                            <mat-form-field>
+                                <input matInput placeholder="DailyRate" formControlName="DailyCtrl" required>
+                                <mat-hint>in Rupees</mat-hint>
+                            </mat-form-field><br>
+
+                            <mat-form-field>
+                                <input matInput placeholder="MonthlyRate" formControlName="MonthlyCtrl" required>
+                                <mat-hint>in Rupees</mat-hint>
+                            </mat-form-field>
+                        </div>
+                    </mat-expansion-panel>
+
+
+
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                Dedicated Desk
+                            </mat-panel-title>
+
+                        </mat-expansion-panel-header>
+                        <div id="matprice">
+                            <mat-form-field>
+                                <input matInput placeholder="Capacity" formControlName="CapacityCtrl" required>
+                                <mat-hint>Number of seats available</mat-hint>
+                            </mat-form-field><br>
+                            <mat-form-field>
+                                <input matInput placeholder="HourlyRate" formControlName="HourCtrl" required>
+                                <mat-hint>in Rupees</mat-hint>
+                            </mat-form-field><br>
+
+                            <mat-form-field>
+                                <input matInput placeholder="DailyRate" formControlName="DailyCtrl" required>
+                                <mat-hint>in Rupees</mat-hint>
+                            </mat-form-field><br>
+
+                            <mat-form-field>
+                                <input matInput placeholder="MonthlyRate" formControlName="MonthlyCtrl" required>
+                                <mat-hint>in Rupees</mat-hint>
+                            </mat-form-field>
+                        </div>
+                    </mat-expansion-panel>
+
+
+
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                Event Space
+                            </mat-panel-title>
+
+                        </mat-expansion-panel-header>
+                        <div id="matprice">
+                            <mat-form-field>
+                                <input matInput placeholder="Capacity" formControlName="CapacityCtrl" required>
+                                <mat-hint>Number of seats available</mat-hint>
+                            </mat-form-field><br>
+                            <mat-form-field>
+                                <input matInput placeholder="HourlyRate" formControlName="HourCtrl" required>
+                                <mat-hint>in Rupees</mat-hint>
+                            </mat-form-field><br>
+
+                            <mat-form-field>
+                                <input matInput placeholder="DailyRate" formControlName="DailyCtrl" required>
+                                <mat-hint>in Rupees</mat-hint>
+                            </mat-form-field><br>
+
+                            <mat-form-field>
+                                <input matInput placeholder="MonthlyRate" formControlName="MonthlyCtrl" required>
+                                <mat-hint>in Rupees</mat-hint>
+                            </mat-form-field>
+                        </div>
+                    </mat-expansion-panel>
+
+
+
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                Training Room
+                            </mat-panel-title>
+
+                        </mat-expansion-panel-header>
+                        <div id="matprice">
+                            <mat-form-field>
+                                <input matInput placeholder="Capacity" formControlName="CapacityCtrl" required>
+                                <mat-hint>Number of seats available</mat-hint>
+                            </mat-form-field><br>
+                            <mat-form-field>
+                                <input matInput placeholder="HourlyRate" formControlName="HourCtrl" required>
+                                <mat-hint>in Rupees</mat-hint>
+                            </mat-form-field><br>
+
+                            <mat-form-field>
+                                <input matInput placeholder="DailyRate" formControlName="DailyCtrl" required>
+                                <mat-hint>in Rupees</mat-hint>
+                            </mat-form-field><br>
+
+                            <mat-form-field>
+                                <input matInput placeholder="MonthlyRate" formControlName="MonthlyCtrl" required>
+                                <mat-hint>in Rupees</mat-hint>
+                            </mat-form-field>
+                        </div>
+                    </mat-expansion-panel>
+
+
+
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                Private Cabin
+                            </mat-panel-title>
+
+                        </mat-expansion-panel-header>
+                        <div id="matprice">
+                            <mat-form-field>
+                                <input matInput placeholder="Capacity" formControlName="CapacityCtrl" required>
+                                <mat-hint>Number of seats available</mat-hint>
+                            </mat-form-field><br>
+                            <mat-form-field>
+                                <input matInput placeholder="HourlyRate" formControlName="HourCtrl" required>
+                                <mat-hint>in Rupees</mat-hint>
+                            </mat-form-field><br>
+
+                            <mat-form-field>
+                                <input matInput placeholder="DailyRate" formControlName="DailyCtrl" required>
+                                <mat-hint>in Rupees</mat-hint>
+                            </mat-form-field><br>
+
+                            <mat-form-field>
+                                <input matInput placeholder="MonthlyRate" formControlName="MonthlyCtrl" required>
+                                <mat-hint>in Rupees</mat-hint>
+                            </mat-form-field>
+                        </div>
+                    </mat-expansion-panel>
+
+                    <mat-expansion-panel>
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                Hot Desk
+                            </mat-panel-title>
+
+                        </mat-expansion-panel-header>
+                        <div id="matprice">
+                            <mat-form-field>
+                                <input matInput placeholder="Capacity" formControlName="CapacityCtrl" required>
+                                <mat-hint>Number of seats available</mat-hint>
+                            </mat-form-field><br>
+                            <mat-form-field>
+                                <input matInput placeholder="HourlyRate" formControlName="HourCtrl" required>
+                                <mat-hint>in Rupees</mat-hint>
+                            </mat-form-field><br>
+
+                            <mat-form-field>
+                                <input matInput placeholder="DailyRate" formControlName="DailyCtrl" required>
+                                <mat-hint>in Rupees</mat-hint>
+                            </mat-form-field><br>
+
+                            <mat-form-field>
+                                <input matInput placeholder="MonthlyRate" formControlName="MonthlyCtrl" required>
+                                <mat-hint>in Rupees</mat-hint>
+                            </mat-form-field>
+                        </div>
+                    </mat-expansion-panel>
+
+
+                    <!-- </mat-accordion> -->
+
+
+
+                    <!-- <mat-form-field>
                         <input matInput type="number" placeholder="Price" [(ngModel)]="price" formControlName="PriceCtrl" required>
                     </mat-form-field>
-                    <br>
+                    <br> -->
+
+
                     <div id="mat">
 
                         <mat-form-field>
@@ -180,8 +368,7 @@
                             <mat-hint>Width of space in sq.m</mat-hint>
                         </mat-form-field>
                     </div>
-                    <button type="button" mat-raised-button (click)="fileInput.click()">Upload Image</button>
-                    <input hidden (change)="onFileSelected()" #fileInput type="file" id="file">
+
                     <div class="next">
                         <button mat-raised-button matStepperNext color="primary">Next</button><br><br>
                     </div>

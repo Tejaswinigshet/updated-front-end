@@ -13,6 +13,8 @@ export class AddPropertiesComponent implements OnInit {
    firstFormGroup: FormGroup;
    secondFormGroup: FormGroup;
    thirdFormGroup: FormGroup;
+   panelOpenState = false;
+
 
    
 
@@ -21,10 +23,15 @@ export class AddPropertiesComponent implements OnInit {
       this.firstFormGroup = this._formBuilder.group({
          IdCtrl: ['', Validators.required],
          NameCtrl: ['', Validators.required],
-         CategoryCtrl: ['', Validators.required],
-         PriceCtrl: ['', Validators.required],
+         // CategoryCtrl: ['', Validators.required],
+      
          HeightCtrl: ['', Validators.required],
-         WidthCtrl: ['', Validators.required]
+         WidthCtrl: ['', Validators.required],
+         HourCtrl: ['', Validators.required],
+         DailyCtrl: ['', Validators.required],
+         MonthlyCtrl: ['', Validators.required],
+         CapacityCtrl: ['', Validators.required]
+
       });
       this.secondFormGroup = this._formBuilder.group({
          NumberCtrl: ['', Validators.required],

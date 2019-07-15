@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CustomMaterialModule } from './material/material.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -22,7 +22,7 @@ import { OwnerDashboardComponent } from './owner-dashboard/owner-dashboard.compo
 import { AddPropertiesComponent } from './add-properties/add-properties.component';
 import { InformationUpdateComponent } from './information-update/information-update.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { MatCardModule, MatButtonToggleModule, MatStepperModule, MatInputModule, MatButtonModule, MatSelectModule, MatOptionModule } from '@angular/material';
+import { MatCardModule, MatButtonToggleModule, MatStepperModule, MatInputModule, MatButtonModule, MatSelectModule, MatOptionModule, MatExpansionModule } from '@angular/material';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { CardComponent } from './card/card.component';
 import {HttpClientModule} from '@angular/common/http'
@@ -79,11 +79,13 @@ import { PaymentComponent } from './payment/payment.component';
     HttpClientModule,
     NgbModule,
     MatSelectModule,
-    MatOptionModule
+    MatOptionModule,
+    MatExpansionModule
     
   ],
   providers: [CardService],
   bootstrap: [AppComponent],
-  entryComponents:[LocationComponent]
+  entryComponents:[LocationComponent],
+  schemas:[CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }

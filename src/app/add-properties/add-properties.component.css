@@ -128,9 +128,10 @@ mat-form-field {
     caret-color: white;
 }
 
-.next {
-    margin: 71px;
-}
+
+/* .next {
+     margin: -0.8px; 
+} */
 
 .amenity {
     margin-top: 5px;
@@ -200,4 +201,36 @@ img {
     font-style: italic;
     font-weight: bold;
     color: white;
+}
+
+#matprice {
+    width: 80%;
+    margin-left: 10%;
+    font-style: italic;
+    font-weight: bold;
+    color: white;
+}
+
+mat-expansion-panel-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* margin-left: 29%;
+    margin-right: 31%; */
+    border-radius: inherit;
+}
+
+.mat-expansion-panel {
+    box-sizing: border-box;
+    display: block;
+    /* margin-left: -75%; */
+    margin: 1% 30%;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: margin 225ms cubic-bezier(.4, 0, .2, 1), box-shadow 280ms cubic-bezier(.4, 0, .2, 1);
+}
+
+.mat-expansion-panel {
+    background: #19181891;
+    color: #fff;
 }
